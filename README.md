@@ -475,7 +475,8 @@ Loading a dataset from a file is very similar to loading a model from a file. A 
 The following example would load a sentiment classification dataset from file `my_dataset.py`:
 
 ```python
-dataset = [('Today was....', 1), ('This movie is...', 0), ...]
+from textattack import datasets
+dataset = datasets.Dataset([('Today was....', 1), ('This movie is...', 0), ...])
 ```
 
 You can then run attacks on samples from this dataset by adding the argument `--dataset-from-file my_dataset.py`.
